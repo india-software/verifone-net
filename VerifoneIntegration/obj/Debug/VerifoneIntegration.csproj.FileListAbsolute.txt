@@ -1,0 +1,13 @@
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\bin\Debug\VerifoneIntegration.exe.config
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\bin\Debug\VerifoneIntegration.exe
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\bin\Debug\VerifoneIntegration.pdb
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.csprojAssemblyReference.cache
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.csproj.CoreCompileInputs.cache
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.exe
+C:\Episerver\Sites\StockSync\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.pdb
+C:\Episerver\Sites\Services\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\bin\Debug\VerifoneIntegration.exe.config
+C:\Episerver\Sites\Services\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\bin\Debug\VerifoneIntegration.exe
+C:\Episerver\Sites\Services\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\bin\Debug\VerifoneIntegration.pdb
+C:\Episerver\Sites\Services\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.csprojAssemblyReference.cache
+C:\Episerver\Sites\Services\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.exe
+C:\Episerver\Sites\Services\Verifone Integraion\VerifoneIntegration\VerifoneIntegration\obj\Debug\VerifoneIntegration.pdb

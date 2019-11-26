@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.commidea.webservices.com" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://www.commidea.webservices.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.commidea.webservices.com">
+      <s:element name="ProcessMsg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Message">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientHeader" type="tns:ClientHeader" />
+          <s:element minOccurs="0" maxOccurs="1" name="MsgType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MsgData" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SystemID" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SystemGUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Passcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessingDB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendAttempt" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CDATAWrapping" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Source" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProcessMsgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessMsgResult" type="tns:Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessMsgSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessMsg" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMsgSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessMsgResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CommideaGatewaySoap">
+    <wsdl:operation name="ProcessMsg">
+      <wsdl:input message="tns:ProcessMsgSoapIn" />
+      <wsdl:output message="tns:ProcessMsgSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommideaGatewaySoap" type="tns:CommideaGatewaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessMsg">
+      <soap:operation soapAction="https://www.commidea.webservices.com/ProcessMsg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommideaGatewaySoap12" type="tns:CommideaGatewaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessMsg">
+      <soap12:operation soapAction="https://www.commidea.webservices.com/ProcessMsg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommideaGateway">
+    <wsdl:port name="CommideaGatewaySoap" binding="tns:CommideaGatewaySoap">
+      <soap:address location="https://txn-cst.cxmlpg.com/XML4/commideagateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommideaGatewaySoap12" binding="tns:CommideaGatewaySoap12">
+      <soap12:address location="https://txn-cst.cxmlpg.com/XML4/commideagateway.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
